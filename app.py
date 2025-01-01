@@ -38,12 +38,9 @@ def generate_bill():
 
     # Serve PDF as a response 
     response = make_response(pdf)
-    response.headers['Content-Disposition'] = f'inline;
-    filename = bill_{customer_name}.pdf'
+    response.headers['Content-Disposition'] = f'inline; filename = "bill_{customer_name}.pdf"'
 
     return response
-
-
 
 if __name__ == '__main__':
     app.run(debug=True)
