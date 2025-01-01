@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Generator</title>
+</head>
+<body>
+    <h1>Bill Generator</h1>
+    <form action="/generate-bill" method="POST">
+
+        <!-- customer details  -->
+        <h3>Customer details</h3>
+        <label for="customer_name">Name:</label>
+        <input type="text" id="customer_name" name="customer_name" required><br><br>
+        <label for="customer_address">Address:</Address></label>
+        <textarea name="customer_address" id="customer_address" required></textarea><br><br>
+        <label for="customer_contact">Contact Number:</label>
+        <input type="text" id="customer_contact" name="customer_contact" required><br><br>
+
+        <!-- Item details -->
+        <h3>Item Details</h3>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
