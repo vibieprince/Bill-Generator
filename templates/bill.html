@@ -8,9 +8,9 @@
 <body>
     <h1>Bill</h1>
     <h3>Customer Details</h3>
-    <p><b>Name:</b>{{customer_name}}</p>
-    <p><b>Address:</b>{{customer_address}}</p>
-    <p><b>Contact:</b>{{customer_contact}}</p>
+    <p><b>Name : </b>{{customer_name}}</p>
+    <p><b>Address : </b>{{customer_address}}</p>
+    <p><b>Contact : </b>{{customer_contact}}</p>
 
     <h3>Item Details</h3>
     <table border="1">
@@ -35,8 +35,8 @@
     </table>
 
     <h3>Totals</h3>
-    <p><b>Subtotal:</b>{{subtotal}}</p>
-    <p><b>Tax(10%):</b>{{tax}}</p>
-    <p><b>Grand Total:</b>{{grand_total}}</p>
+    <p><b>Subtotal : </b>{{subtotal}}</p>
+    <p><b>Tax(10%) : </b>{{tax | round(2)}}</p>
+    <p><b>Grand Total : </b>{{grand_total}}</p>
 </body>
 </html>
