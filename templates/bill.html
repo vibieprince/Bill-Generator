@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated Bill</title>
+</head>
+<body>
+    <h1>Bill</h1>
+    <h3>Customer Details</h3>
+    <p><b>Name:</b>{{customer_name}}</p>
+    <p><b>Address:</b>{{customer_address}}</p>
+    <p><b>Contact:</b>{{customer_contact}}</p>
+
+    <h3>Item Details</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in items}
+            <tr>
+                <td>{{item.name}}</td>
+                <td>{{item.quantity}}</td>
+                <td>{{item.price}}</td>
+                <td>{{item.total_price}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h3>Totals</h3>
+    <p><b>Subtotal:</b>{{subtotal}}</p>
+    <p><b>Tax(10%):</b>{{tax}}</p>
+    <p><b>Grand Total:</b>{{grand_total}}</p>
+</body>
+</html>
