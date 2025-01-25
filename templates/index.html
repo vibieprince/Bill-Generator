@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bill Generator</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
     <h1>Bill Generator</h1>
     <form action="/generate-bill" method="POST">
 
-        <!-- customer details  -->
+        <!-- customer details -->
         <h3>Customer details</h3>
         <label for="customer_name">Name:</label>
         <input type="text" id="customer_name" name="customer_name" required><br><br>
@@ -32,23 +33,9 @@
         </div>
         <button type="button" onclick="addItem()">Add More Items</button><br><br>
 
-        <!-- Submit button  -->
+        <!-- Submit button -->
         <button type="submit">Generate Bill</button>
     </form>
-    <script>
-        function addItem(){
-            const itemsDiv = document.getElementById('items');
-            const newItem = document.createElement('div');
-            newItem.classList.add('item');
-            newItem.innerHTML = 
-            `<label>Product Name:</label>
-            <input type="text" name="product_name[]" required>
-            <label>Quantity:</label>
-            <input type="number" name="quantity[]" min="1" required>
-            <label>Price:</label>
-            <input type="number" name="price[]" min="0.01" step="0.01" required>`;
-            itemsDiv.appendChild(newItem);
-        }
-    </script>
+    <script src="/static/script.js"></script>
 </body>
 </html>
